@@ -4,10 +4,13 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
+    "gatsby-theme-gallery",
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
