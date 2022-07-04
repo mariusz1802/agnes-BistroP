@@ -1,6 +1,6 @@
-import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
-import styled from "styled-components"
+import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import styled from "styled-components";
 
 function Footer() {
   return (
@@ -41,15 +41,15 @@ function Footer() {
         </BottomTextContainer>
       </BlackLine>
     </>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
 
 const Layout = styled.div`
   width: 95%;
   margin: auto;
-`
+`;
 
 const Grid = styled.div`
   display: grid;
@@ -71,7 +71,7 @@ const Grid = styled.div`
       "data"
       "photo";
   }
-`
+`;
 
 // ******* Name Container left side strart *******
 const NameContainer = styled.div`
@@ -83,27 +83,27 @@ const NameContainer = styled.div`
   padding-left: 20px;
   grid-area: name;
   min-width: 300px;
-`
+`;
 
 const Name = styled.h5`
   font-weight: 700;
   font-size: clamp(2.2rem, 4vw, 2.5rem);
   margin-bottom: 10px;
-`
+`;
 const Position = styled.h6`
   font-weight: 500;
   width: 80%;
   padding-bottom: 10px;
   border-bottom: 7px solid black;
   font-size: clamp(1.8rem, 3vw, 2.3rem);
-`
+`;
 // ******* Name Container left side end *******
 
 // ******* Photo Container center start *******
 const PhotoContainer = styled.div`
   grid-area: photo;
-  margin-bottom: -171px;
-`
+  margin-bottom: -168px;
+`;
 // ******* Photo Container center end *******
 
 // ******* Company Data container riht side start *******
@@ -116,7 +116,7 @@ const CompanyDataContainer = styled.div`
   padding-left: 60px;
   width: 80%;
   padding: 10px;
-`
+`;
 
 const CompanyName = styled.h6`
   font-size: 2rem;
@@ -125,25 +125,26 @@ const CompanyName = styled.h6`
   padding-bottom: 20px;
   border-bottom: 7px solid black;
   margin-bottom: 20px;
-`
+`;
 
 const CompanyData = styled.h6`
   font-size: clamp(1.3rem, 2vw, 1.3rem);
   font-weight: 300;
   line-height: 2rem;
-`
+`;
 
 // ******* Company Data container riht side end *******
 
 // ******* Bottom Text ***********
 
 const BlackLine = styled.div`
-  min-height: 168px;
+  margin-top: -2px;
+  height: 170px;
   width: 100%;
   background: black;
   overflow: hidden;
   display: flex;
-`
+`;
 
 const BottomTextContainer = styled.div`
   display: grid;
@@ -160,7 +161,7 @@ const BottomTextContainer = styled.div`
       "title"
       "created";
   }
-`
+`;
 const Title = styled.p`
   grid-area: title;
   display: flex;
@@ -169,7 +170,7 @@ const Title = styled.p`
   font-family: "Oleo Script Swash Caps", cursive;
   color: #fff;
   font-size: 3rem;
-`
+`;
 
 const Created = styled.p`
   display: flex;
@@ -191,4 +192,4 @@ const Created = styled.p`
     font-size: 1rem;
     margin-left: -10px;
   }
-`
+`;

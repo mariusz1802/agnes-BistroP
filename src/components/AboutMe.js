@@ -1,18 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import SectionTitle from "./SectionTitle";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import AOS from "aos";
 
 function AboutMe() {
-  useEffect(() => {
-    AOS.init(
-      {
-        duration: 1000,
-      },
-      []
-    );
-  });
   return (
     <>
       {/* ************** Introduce person section **************** */}
@@ -29,7 +20,7 @@ function AboutMe() {
               alt="Agnieszka"
             />
           </ImageContainer>
-          <Description dataAos="fade-up">
+          <Description>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse ipsam
             officia similique saepe asperiores facere odit rem, enim veniam a
             ipsa natus molestiae impedit soluta totam! Repudiandae id cupiditate
@@ -46,7 +37,7 @@ function AboutMe() {
 
         {/* ************** My passion section **************** */}
 
-        <MainContainer dataAos="fade-up">
+        <MainContainer>
           <PassionTitle>MOJE PASJE...</PassionTitle>
           <MyPassionContainer>
             <Passion>

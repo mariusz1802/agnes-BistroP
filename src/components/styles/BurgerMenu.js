@@ -65,6 +65,9 @@ const MobileMenu = styled.div`
   align-items: center;
   z-index: 250;
   opacity: ${({ open }) => (open ? 1 : 0)};
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 const MobileContainer = styled.div`
   display: flex;

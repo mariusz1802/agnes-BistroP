@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 function SectionTitle({ title, id }) {
   return (
@@ -8,10 +8,10 @@ function SectionTitle({ title, id }) {
       <Title>{title}</Title>
       <Line />
     </SectionContainer>
-  )
+  );
 }
 
-export default SectionTitle
+export default SectionTitle;
 
 const Title = styled.div`
   font-size: clamp(2.3rem, 6vw, 2.7rem);
@@ -23,7 +23,7 @@ const Title = styled.div`
   margin: 0 20px;
   white-space: pre;
   width: 100%;
-`
+`;
 
 const SectionContainer = styled.div`
   margin: 70px 0;
@@ -33,10 +33,10 @@ const SectionContainer = styled.div`
   @media screen and (max-width: 700px) {
     margin: 50px 0;
   }
-`
+`;
 const Line = styled.div`
   height: 20px;
   overflow: auto;
   border-bottom: 1px solid grey;
   width: 100%;
-`
+`;

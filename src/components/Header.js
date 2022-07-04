@@ -1,10 +1,10 @@
-import React from "react"
-import { HashLink as Link } from "react-router-hash-link"
-import styled from "styled-components"
-import { menuData } from "../data/MenuData"
-import GlobalStyle from "./styles/GlobalStyles"
-import BurgerMenu from "./styles/BurgerMenu"
-import { BrowserRouter as Router } from "react-router-dom"
+import React from "react";
+import { HashLink as Link } from "react-router-hash-link";
+import styled from "styled-components";
+import { menuData } from "../data/MenuData";
+import GlobalStyle from "./styles/GlobalStyles";
+import BurgerMenu from "./styles/BurgerMenu";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function Header() {
   return (
@@ -24,10 +24,10 @@ function Header() {
       </Nav>
       <BurgerMenu />
     </>
-  )
+  );
 }
 
-export default Header
+export default Header;
 
 const Title = styled.h2`
   font-family: "Oleo Script Swash Caps", cursive;
@@ -47,7 +47,7 @@ const Title = styled.h2`
   @media screen and (max-width: 530px) {
     font-size: 2.5rem;
   }
-`
+`;
 
 const Nav = styled.nav`
   height: 90px;
@@ -57,11 +57,12 @@ const Nav = styled.nav`
   padding: 1rem calc((100vw - 1400px) / 2);
   z-index: 200;
   background: rgba(255, 255, 255, 0.8);
+
   position: relative;
   box-shadow: 2px 7px 5px rgba(0, 0, 0, 0.2),
     0px -4px 10px rgba(255, 255, 255, 0.2);
   z-index: 1;
-`
+`;
 
 const NavLink = styled(Link)`
   color: #fff;
@@ -70,7 +71,7 @@ const NavLink = styled(Link)`
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   width: 130px;
   justify-items: center;
   height: 100%;
@@ -97,7 +98,7 @@ const NavLink = styled(Link)`
     background-color: #fff;
     background-color: black;
   }
-`
+`;
 
 const NavMenu = styled.div`
   display: flex;
@@ -107,4 +108,4 @@ const NavMenu = styled.div`
   @media screen and (max-width: 768px) {
     display: none;
   }
-`
+`;

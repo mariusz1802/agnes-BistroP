@@ -1,6 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import BackgroundSlider from "gatsby-image-background-slider"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import BackgroundSlider from "gatsby-image-background-slider";
 
 function HeroSlider() {
   return (
@@ -21,8 +21,9 @@ function HeroSlider() {
           }
         }
       `)}
+      images={["hero.jpg", "danie-obiadowe.jpg", "ciastka.jpg"]}
     />
-  )
+  );
 }
 
-export default HeroSlider
+export default HeroSlider;
