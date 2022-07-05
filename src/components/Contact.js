@@ -16,7 +16,13 @@ function Contact() {
         <Wrapper>
           {/* Contact data with icons */}
           <DataContact>
-            <Title>DANE KONTAKTOWE</Title>
+            <Title
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+            >
+              DANE KONTAKTOWE
+            </Title>
             <ContactWrapper>
               <A href="tel+48660409938">
                 <ContactBox>

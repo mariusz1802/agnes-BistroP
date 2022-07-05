@@ -10,30 +10,49 @@ function AboutMe() {
 
       <SectionTitle title="O MNIE" id="about" />
       <Layout>
-        <AboutContainer>
-          <Title>
-            Cześć! Jestem <b>Agnieszka!</b>
-          </Title>
-          <ImageContainer>
-            <StaticImage
-              src="../assets/images/aboutme/agnieszka.png"
-              alt="Agnieszka"
-            />
-          </ImageContainer>
-          <Description>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse ipsam
-            officia similique saepe asperiores facere odit rem, enim veniam a
-            ipsa natus molestiae impedit soluta totam! Repudiandae id cupiditate
-            dicta! Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Quod facere laudantium, ex porro molestias officia distinctio! Vero
-            corporis, necessitatibus quos magni beatae obcaecati minima
-            voluptate, ratione laudantium distinctio doloribus praesentium!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
-            perspiciatis fugiat sit minus cum voluptatibus quas. Mollitia quidem
-            illo quo veniam, quisquam facilis error, quos sequi, eligendi magni
-            corporis quia!
-          </Description>
-        </AboutContainer>
+        <div
+          data-sal="ease-out-bouce"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
+          <AboutContainer>
+            <Title
+              data-sal="ease-out-bouce"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+            >
+              Cześć! Jestem <b>Agnieszka!</b>
+            </Title>
+
+            <ImageContainer>
+              <StaticImage
+                src="../assets/images/aboutme/agnieszka.png"
+                alt="Agnieszka"
+                data-sal="ease-out-bouce"
+                data-sal-delay="700"
+                data-sal-easing="ease"
+              />
+            </ImageContainer>
+
+            <Description
+              data-sal="ease-out-bouce"
+              data-sal-delay="500"
+              data-sal-easing="ease"
+            >
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse
+              ipsam officia similique saepe asperiores facere odit rem, enim
+              veniam a ipsa natus molestiae impedit soluta totam! Repudiandae id
+              cupiditate dicta! Lorem ipsum dolor, sit amet consectetur
+              adipisicing elit. Quod facere laudantium, ex porro molestias
+              officia distinctio! Vero corporis, necessitatibus quos magni
+              beatae obcaecati minima voluptate, ratione laudantium distinctio
+              doloribus praesentium! Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Nostrum, perspiciatis fugiat sit minus cum
+              voluptatibus quas. Mollitia quidem illo quo veniam, quisquam
+              facilis error, quos sequi, eligendi magni corporis quia!
+            </Description>
+          </AboutContainer>
+        </div>
 
         {/* ************** My passion section **************** */}
 
