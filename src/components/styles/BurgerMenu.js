@@ -6,6 +6,7 @@ import { menuData } from "../../data/MenuData";
 import { RiInstagramFill } from "react-icons/ri";
 import { HashLink as Link } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
+import { url } from "../../data/url";
 
 function BurgerMenu() {
   const [isOpen, setOpen] = useState(false);
@@ -38,7 +39,13 @@ function BurgerMenu() {
               </LinkContainer>
             </Router>
             <SocialContainer>
-              <BsFacebook size="2.7rem" />
+              <A
+                href={url.facebook_url}
+                target="__blank"
+                rel="noopener noreferrer"
+              >
+                <BsFacebook size="2.7rem" />
+              </A>
               <RiInstagramFill size="3rem" />
             </SocialContainer>
           </ScrollContainer>
@@ -52,21 +59,22 @@ export default BurgerMenu;
 
 // Mobile Menu
 const MobileMenu = styled.div`
-  display: flex;
-  position: fixed;
-  justify-content: center;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-  background: white;
-  transition: all 0.35s;
-  overflow: hidden;
-  align-items: center;
-  z-index: 250;
-  opacity: ${({ open }) => (open ? 1 : 0)};
-  @media screen and (min-width: 768px) {
-    display: none;
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    transition: all 0.35s;
+    overflow: hidden;
+    align-items: center;
+    z-index: 250;
+    visibility: ${({ open }) => (open ? "visible" : "hidden")};
+    opacity: ${({ open }) => (open ? 1 : 0)};
   }
 `;
 const MobileContainer = styled.div`
@@ -140,4 +148,8 @@ const MobileTitle = styled.h2`
   color: black;
   font-size: 3rem;
   margin: 20px 0;
+`;
+const A = styled.a`
+  text-decoration: none;
+  color: inherit;
 `;

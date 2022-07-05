@@ -6,7 +6,7 @@ import { MdLocationOn } from "react-icons/md";
 import { BsFacebook } from "react-icons/bs";
 import { IoIosMail } from "react-icons/io";
 import ContactForm from "./ContactForm/ContactForm";
-const facebook_url = "https://www.facebook.com";
+import { url } from "../data/url";
 
 function Contact() {
   return (
@@ -32,7 +32,7 @@ function Contact() {
                   <ContactText>+48 660 409 938</ContactText>
                 </ContactBox>
               </A>
-              <A href="mailto: kontakt@agnesbistro.pl ">
+              <A href="mailto: kfntakt@agnesbistro.pl ">
                 <ContactBox>
                   <IconBox>
                     <IoIosMail style={{ fontSize: "3.7rem" }} />
@@ -40,12 +40,16 @@ function Contact() {
                   <ContactText>kontakt@agnesbistro.pl</ContactText>
                 </ContactBox>
               </A>
-              <A href={facebook_url} target="__blank" rel="noopener noreferrer">
+              <A
+                href={url.facebook_url}
+                target="__blank"
+                rel="noopener noreferrer"
+              >
                 <ContactBox>
                   <IconBox>
                     <BsFacebook />
                   </IconBox>
-                  <ContactText>facebook.pl/agnesbistro</ContactText>
+                  <ContactText>facebook.pl/bistroagnes</ContactText>
                 </ContactBox>
               </A>
               <ContactBox>

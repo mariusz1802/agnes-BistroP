@@ -11,14 +11,16 @@ import NoSSR from "react-no-ssr";
 // markup
 const IndexPage = () => {
   return (
-    <>
-      <Hero />
-      <ScrollUpBtn />
-      <AboutMe />
-      <Realizations />
-      <Contact />
-      <Footer />
-    </>
+    <NoSSR>
+      <Layout>
+        <Hero />
+        <ScrollUpBtn />
+        <AboutMe />
+        <Realizations />
+        <Contact />
+        <Footer />
+      </Layout>
+    </NoSSR>
   );
 };
 
