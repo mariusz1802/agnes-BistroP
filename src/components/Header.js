@@ -30,7 +30,7 @@ function Header() {
 export default Header;
 
 const Title = styled.h2`
-  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Oleo Script";
   color: #fff;
   color: black;
   font-size: 2.7rem;

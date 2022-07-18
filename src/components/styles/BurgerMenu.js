@@ -144,7 +144,7 @@ const BurgerWrapper = styled.div`
 `;
 
 const MobileTitle = styled.h2`
-  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Oleo Script";
   color: black;
   font-size: 3rem;
   margin: 20px 0;

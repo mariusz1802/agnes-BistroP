@@ -31,12 +31,15 @@ module.exports = {
       },
     },
     "gatsby-plugin-sitemap",
+
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        typekit: {
-          id: process.env.TYPEKIT_ID,
-        },
+        fonts: [
+          `oleo script\: 300, 700`,
+          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+        ],
+        display: "swap",
       },
     },
   ],
