@@ -1,6 +1,6 @@
 export const menuData = [
-  { title: "O MNIE", link: "#about" },
-  { title: "OFERTA", link: "#offer" },
-  { title: "GALERIA", link: "#gallery" },
+  { title: "JAK TO DZIAŁA?", link: "#howItWorks" },
+  { title: "ILE MOGĘ DOSTAĆ?", link: "#howMuchGet" },
+  { title: "STATYSTYKI", link: "#statics" },
   { title: "KONTAKT", link: "#contact" },
-]
+];

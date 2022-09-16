@@ -1,25 +1,24 @@
-import React from "react"
-import styles from "./Modal.module.scss"
-import Button from "../Button/Button"
-import { FaTimes } from "react-icons/fa"
+import React from "react";
+import * as styles from "./Modal.module.scss";
+import Button from "../Button/Button";
+import { FaTimes } from "react-icons/fa";
 
 function Modal({ show, onClose, header, description, btnTitle, textSize }) {
   if (!show) {
-    return null
+    return null;
   }
   const TEXTSIZE = {
     large: styles.largeText,
     medium: styles.mediumText,
-    small: styles.smallText,
-  }
+  };
 
   const checkTextSize = TEXTSIZE.hasOwnProperty.call(TEXTSIZE, textSize)
     ? TEXTSIZE[textSize]
-    : TEXTSIZE.medium
+    : TEXTSIZE.medium;
 
   return (
     <div className={`${styles.modal} ${checkTextSize}`} onClick={onClose}>
-      <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <div className={styles.modalHeader}>
           <FaTimes size="1.2em" onClick={onClose} />
         </div>
@@ -36,7 +35,7 @@ function Modal({ show, onClose, header, description, btnTitle, textSize }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Modal
+export default Modal;

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { menuData } from "../data/MenuData";
 import GlobalStyle from "./styles/GlobalStyles";
 import BurgerMenu from "./styles/BurgerMenu";
+import SprzedamSzkodeText from "./SprzedamSzkodeText/SprzedamSzkodeText";
 import { BrowserRouter as Router } from "react-router-dom";
 
 function Header() {
@@ -11,7 +12,7 @@ function Header() {
     <>
       <GlobalStyle />
       <Nav>
-        <Title to="/">Agnes Bistro </Title>
+        <SprzedamSzkodeText />
         <NavMenu>
           <Router>
             {menuData.map((item, index) => (
@@ -29,59 +30,31 @@ function Header() {
 
 export default Header;
 
-const Title = styled.h2`
-  font-family: "Oleo Script";
-  color: #fff;
-  color: black;
-  font-size: 2.7rem;
-  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
-    0px -4px 10px rgba(255, 255, 255, 0.3);
-  z-index: 1;
-  margin-left: 30px;
-  @media screen and (max-width: 840px) {
-    font-size: 2rem;
-  }
-  @media screen and (max-width: 770px) {
-    font-size: 3.3rem;
-  }
-  @media screen and (max-width: 530px) {
-    font-size: 2.5rem;
-  }
-`;
-
 const Nav = styled.nav`
-  height: 90px;
-  background-color: transparent;
+  height: 140px;
+  background-color: none;
   display: flex;
   justify-content: space-between;
-  padding: 1rem calc((100vw - 1400px) / 2);
+  padding: 1rem calc((100vw - 1800px) / 2);
   z-index: 200;
-  background: rgba(255, 255, 255, 0.8);
-
   position: relative;
-  box-shadow: 2px 7px 5px rgba(0, 0, 0, 0.2),
-    0px -4px 10px rgba(255, 255, 255, 0.2);
-  z-index: 1;
+  z-index: 3;
 `;
 
 const NavLink = styled(Link)`
-  color: #fff;
-  color: black;
+  color: #6a4fd4;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-size: 1.6rem;
-  width: 130px;
+  font-size: clamp(1.1rem, 1.6rem, 2.2rem);
+  margin: 5px 20px;
   justify-items: center;
   height: 100%;
   letter-spacing: 1px;
-  /* text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
-    0px -4px 10px rgba(255, 255, 255, 0.3); */
-  font-weight: 400;
+  font-weight: 700;
   cursor: pointer;
-  /* adding style */
-  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
   :after {
     content: "";
@@ -90,13 +63,12 @@ const NavLink = styled(Link)`
     height: 3px;
     display: block;
     transition: all 0.4s ease;
-    bottom: 25%;
+    bottom: 30%;
   }
   :hover::after {
-    width: 110px;
-    height: 3px;
-    background-color: #fff;
-    background-color: black;
+    width: 160px;
+    height: 4px;
+    background-color: #6a4fd4;
   }
 `;
 
@@ -105,7 +77,7 @@ const NavMenu = styled.div`
   align-items: center;
   margin-right: 40px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1540px) {
     display: none;
   }
 `;

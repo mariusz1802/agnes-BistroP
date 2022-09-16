@@ -1,0 +1,29 @@
+.carCrash {
+  width: 40%;
+  top: -150px;
+  position: absolute;
+  z-index: 1;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  .carCrash {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .carCrash {
+    width: 100%;
+    top: -300px;
+  }
+}
+
+.background {
+  width: auto;
+  height: auto;
+  position: absolute;
+  margin-top: -7%;
+
+  z-index: 1;
+}

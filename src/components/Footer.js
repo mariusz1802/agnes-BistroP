@@ -1,195 +1,150 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import SectionTitle from "./SectionTitle";
 import styled from "styled-components";
+import { ImMobile } from "react-icons/im";
+import { MdLocationOn } from "react-icons/md";
+import { BsFacebook } from "react-icons/bs";
+import { IoIosMail } from "react-icons/io";
+import { url } from "../data/url";
+import SprzedamSzkodeText from "./SprzedamSzkodeText/SprzedamSzkodeText";
 
 function Footer() {
   return (
-    <>
+    <MainWrapper id="contact">
+      <SprzedamSzkodeText />
       <Layout>
-        <Grid>
-          <NameContainer>
-            <Name>Agnieszka Szmidt</Name>
-            <Position>Właścicielka firmy</Position>
-          </NameContainer>
-          <PhotoContainer>
-            <StaticImage
-              src="../assets/images/agnes-circle-footer.svg"
-              alt="Agnieszka"
-            />
-          </PhotoContainer>
-          <CompanyDataContainer>
-            <CompanyName>Dane Firmy</CompanyName>
-            <CompanyData>
-              Agnes Twoje Bistro <br /> NIP: 8851540226 <br /> REGON: 521600410
-            </CompanyData>
-          </CompanyDataContainer>
-        </Grid>
+        <Wrapper>
+          {/* Footer data with icons */}
+          <DataContact>
+            <ContactWrapper>
+              <A href="tel+48666742743">
+                <ContactBox>
+                  <IconBox>
+                    <ImMobile />
+                  </IconBox>
+                  <ContactText>666 742 743</ContactText>
+                </ContactBox>
+              </A>
+              <A href="mailto: kontakt@sprzedamszkode.pl ">
+                <ContactBox>
+                  <IconBox>
+                    <IoIosMail style={{ fontSize: "3.7rem" }} />
+                  </IconBox>
+                  <ContactText>kontakt@sprzedamszkode.pl</ContactText>
+                </ContactBox>
+              </A>
+              <A
+                href={url.facebook_url}
+                target="__blank"
+                rel="noopener noreferrer"
+              >
+                <ContactBox>
+                  <IconBox>
+                    <BsFacebook />
+                  </IconBox>
+                  <ContactText>facebook.pl/sprzedamszkode</ContactText>
+                </ContactBox>
+              </A>
+              <ContactBox>
+                <IconBox>
+                  <MdLocationOn
+                    style={{ fontSize: "4.2rem", marginLeft: "-10px" }}
+                  />
+                </IconBox>
+                <ContactText>
+                  NIP: 293843905 <br />
+                  REGON: 2948539435
+                </ContactText>
+              </ContactBox>
+            </ContactWrapper>
+          </DataContact>
+          {/* Contact form */}
+          <DataContact></DataContact>
+        </Wrapper>
       </Layout>
-      <BlackLine>
-        <BottomTextContainer>
-          <Title>Agnes Bistro</Title>
-          <Created>
-            Created by&nbsp;
-            <a
-              href="https://www.bombadesign.pl/"
-              target="__blank"
-              rel="noopener no referrer"
-            >
-              bombadesign.pl
-            </a>
-          </Created>
-        </BottomTextContainer>
-      </BlackLine>
-    </>
+    </MainWrapper>
   );
 }
 
 export default Footer;
 
+const MainWrapper = styled.div`
+  padding: 20px 100px;
+  border-top: 25px solid #af56ff;
+  background: linear-gradient(#6a4fd4, #35286a);
+`;
+
 const Layout = styled.div`
-  width: 95%;
+  width: 90%;
   margin: auto;
+  @media screen and(max-width:380px) {
+    width: 95%;
+  }
 `;
 
-const Grid = styled.div`
-  display: grid;
+const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+// *********** Contact Data cotainer start *************
+const DataContact = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 20px;
   margin-top: 100px;
-  grid-template-columns: 1fr 400px 1fr;
-  grid-template-areas: "name photo data";
-  justify-items: center;
-  @media screen and (max-width: 950px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "name data"
-      "photo photo";
-  }
-  @media screen and (max-width: 500px) {
-    grid-template-columns: 1fr;
-    row-gap: 30px;
-    grid-template-areas:
-      "name"
-      "data"
-      "photo";
+  /* font-family: "Fredoka One", cursive; */
+
+  @media screen and (max-width: 380px) {
+    width: 100%;
+    padding: 5px;
   }
 `;
 
-// ******* Name Container left side strart *******
-const NameContainer = styled.div`
+const ContactWrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 80%;
-  justify-content: center;
-  align-items: left;
-  padding-left: 20px;
-  grid-area: name;
-  min-width: 300px;
+  font-size: 2.5rem;
+  line-height: 1.4;
 `;
 
-const Name = styled.h5`
-  font-weight: 700;
-  font-size: clamp(2.2rem, 4vw, 2.5rem);
-  margin-bottom: 10px;
+const A = styled.a`
+  text-decoration: none;
+  color: inherit;
 `;
-const Position = styled.h6`
-  font-weight: 500;
-  width: 80%;
-  padding-bottom: 10px;
-  border-bottom: 7px solid black;
-  font-size: clamp(1.8rem, 3vw, 2.3rem);
-`;
-// ******* Name Container left side end *******
 
-// ******* Photo Container center start *******
-const PhotoContainer = styled.div`
-  grid-area: photo;
-  margin-bottom: -168px;
-`;
-// ******* Photo Container center end *******
-
-// ******* Company Data container riht side start *******
-const CompanyDataContainer = styled.div`
+const ContactBox = styled.div`
   display: flex;
-  flex-direction: column;
-  grid-area: data;
-  justify-content: center;
-  align-items: left;
-  padding-left: 60px;
-  width: 80%;
-  padding: 10px;
-`;
-
-const CompanyName = styled.h6`
-  font-size: 2rem;
-  font-weight: 700;
-  width: 60%;
-  padding-bottom: 20px;
-  border-bottom: 7px solid black;
-  margin-bottom: 20px;
-`;
-
-const CompanyData = styled.h6`
-  font-size: clamp(1.3rem, 2vw, 1.3rem);
-  font-weight: 300;
-  line-height: 2rem;
-`;
-
-// ******* Company Data container riht side end *******
-
-// ******* Bottom Text ***********
-
-const BlackLine = styled.div`
-  margin-top: -2px;
-  height: 170px;
-  width: 100%;
-  background: black;
-  overflow: hidden;
-  display: flex;
-`;
-
-const BottomTextContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 400px 1fr;
-  grid-template-areas: "created title .";
-  height: 100%;
-  width: 100%;
-  margin: auto;
-  z-index: 2;
-  @media screen and (max-width: 950px) {
-    grid-template-columns: 1fr;
-    justify-content: center;
-    grid-template-areas:
-      "title"
-      "created";
-  }
-`;
-const Title = styled.p`
-  grid-area: title;
-  display: flex;
-  justify-content: center;
+  align-content: center;
   align-items: center;
-  font-family: "Oleo Script Swash Caps", cursive;
-  color: #fff;
-  font-size: 3rem;
+  height: 100px;
+  :nth-child(2) {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  :nth-child(3) {
+    border-bottom: 1px solid black;
+  }
 `;
 
-const Created = styled.p`
+const IconBox = styled.div`
+  font-size: 3.4rem;
   display: flex;
-  align-items: flex-end;
-  grid-area: created;
-  margin: 20px;
-  height: 100%;
-  color: white;
-  font-size: 1.1rem;
-  a {
-    color: white;
-    text-decoration: underline !important;
-  }
-
-  @media screen and (max-width: 950px) {
-    justify-content: center;
-  }
-  @media screen and (max-width: 370px) {
-    font-size: 1rem;
-    margin-left: -10px;
-  }
+  margin-right: 25px;
+  justify-content: start;
 `;
+
+const ContactText = styled.p`
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 2.6rem;
+  font-size: clamp(1.8rem, 12vw, 2.4rem);
+  font-family: "Fredoka One", cursive;
+  letter-spacing: 1px;
+`;
+// *********** Contact Data cotainer end *************

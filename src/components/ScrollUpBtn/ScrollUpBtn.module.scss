@@ -1,4 +1,4 @@
-.tranasition {
+.transition {
   right: 20px;
 }
 
@@ -8,10 +8,12 @@
   bottom: 150px;
   transition: right 0.5s;
   cursor: pointer;
-  background-color: white;
+  background-color: yellow;
   font-size: 30px;
   padding: 10px;
   min-width: 65px;
   min-height: 65px;
   border-radius: 35px;
+  background: red;
+  color: red;
 }

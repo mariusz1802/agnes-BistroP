@@ -2,12 +2,12 @@ import * as React from "react";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import ScrollUpBtn from "../components/ScrollUpBtn/ScrollUpBtn";
-import AboutMe from "../components/AboutMe";
-import Realizations from "../components/Realizations";
-import Contact from "../components/Contact";
+import Stats from "../components/Stats/Stats";
 import Footer from "../components/Footer";
+import HowItWorks from "../components/HowItWorks/HowItWorks";
+import HowMuch from "../components/HowMuch/HowMuch";
 import NoSSR from "react-no-ssr";
-
+import ContentWrapper from "../components/Form/ContentWrapper";
 // markup
 const IndexPage = () => {
   return (
@@ -15,9 +15,11 @@ const IndexPage = () => {
       <Layout>
         <Hero />
         <ScrollUpBtn />
-        <AboutMe />
-        <Realizations />
-        <Contact />
+        <ContentWrapper>
+          <HowItWorks />
+          <Stats />
+          <HowMuch />
+        </ContentWrapper>
         <Footer />
       </Layout>
     </NoSSR>

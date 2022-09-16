@@ -130,7 +130,7 @@ const MobileLink = styled(Link)`
 `;
 const BurgerWrapper = styled.div`
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1540px) {
     display: block;
     top: 15px;
     right: 15px;

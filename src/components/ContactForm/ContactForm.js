@@ -143,7 +143,7 @@ class Form extends Component {
 
   render() {
     return (
-      <div className={styles.column} id="formularz">
+      <div id="formularz">
         <Modal
           onClose={this.setShow}
           btnTitle="OK"
@@ -160,7 +160,6 @@ class Form extends Component {
             name="subject"
             value={this.state.subject}
             onChange={(event) => this.handleUserInput(event)}
-            ownClass={styles.error}
             required
           />
           <FormErrors formErrors={this.state.formErrors.subject} />
