@@ -7,7 +7,7 @@ import Button from "../Button/Button";
 function Form() {
   return (
     <FormContainer>
-      <ResponsiveHeader>Miałeś szkodę w ciągu 3 lat ?</ResponsiveHeader>
+      <Header>Miałeś szkodę w ciągu 3 lat ?</Header>
       <Input placeholder="Imię*" />
       <Input placeholder="Nazwisko*" />
       <Input placeholder="Telefon*" />
@@ -26,8 +26,4 @@ const FormContainer = styled.form`
   align-items: center;
   width: 100%;
   justify-content: space-around;
-`;
-
-const ResponsiveHeader = styled(Header)`
-  font-size: clamp(1.4rem, 2.2rem, 3.2rem);
 `;
