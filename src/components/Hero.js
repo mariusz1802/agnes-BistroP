@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import Crash from "../assets/carcrash.svg";
-import Background from "../assets/backgroundPurple.svg";
-import * as styles from "./Hero.module.scss";
-import FormStyle from "../components/Form/Form";
+import React from 'react';
+import styled from 'styled-components';
+import Crash from '../assets/carcrash.svg';
+import Background from '../assets/backgroundPurple.svg';
+import * as styles from './Hero.module.scss';
+import FormStyle from '../components/Form/Form';
 function Hero() {
   return (
     <>
@@ -110,7 +110,7 @@ const HigherText = styled(Text)`
 
 const Form = styled(Text)`
   height: auto;
-  background: none;
+  width: 35%;
   @media screen and (max-width: 1200px) {
     display: block;
     width: 45%;

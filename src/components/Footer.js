@@ -1,12 +1,12 @@
-import React from "react";
-import SectionTitle from "./SectionTitle";
-import styled from "styled-components";
-import { ImMobile } from "react-icons/im";
-import { MdLocationOn } from "react-icons/md";
-import { BsFacebook } from "react-icons/bs";
-import { IoIosMail } from "react-icons/io";
-import { url } from "../data/url";
-import SprzedamSzkodeText from "./SprzedamSzkodeText/SprzedamSzkodeText";
+import React from 'react';
+import SectionTitle from './SectionTitle';
+import styled from 'styled-components';
+import { ImMobile } from 'react-icons/im';
+import { MdLocationOn } from 'react-icons/md';
+import { BsFacebook } from 'react-icons/bs';
+import { IoIosMail } from 'react-icons/io';
+import { url } from '../data/url';
+import SprzedamSzkodeText from './SprzedamSzkodeText/SprzedamSzkodeText';
 
 function Footer() {
   return (
@@ -28,7 +28,7 @@ function Footer() {
               <A href="mailto: kontakt@sprzedamszkode.pl ">
                 <ContactBox>
                   <IconBox>
-                    <IoIosMail style={{ fontSize: "3.7rem" }} />
+                    <IoIosMail style={{ fontSize: '3.7rem' }} />
                   </IconBox>
                   <ContactText>kontakt@sprzedamszkode.pl</ContactText>
                 </ContactBox>
@@ -48,7 +48,7 @@ function Footer() {
               <ContactBox>
                 <IconBox>
                   <MdLocationOn
-                    style={{ fontSize: "4.2rem", marginLeft: "-10px" }}
+                    style={{ fontSize: '4.2rem', marginLeft: '-10px' }}
                   />
                 </IconBox>
                 <ContactText>
@@ -122,7 +122,7 @@ const ContactBox = styled.div`
   display: flex;
   align-content: center;
   align-items: center;
-  height: 100px;
+  height: 90px;
   :nth-child(2) {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
@@ -143,8 +143,8 @@ const ContactText = styled.p`
   font-size: 3rem;
   font-weight: 300;
   line-height: 2.6rem;
-  font-size: clamp(1.8rem, 12vw, 2.4rem);
-  font-family: "Fredoka One", cursive;
+  font-size: clamp(1.6rem, 10vw, 2.1rem);
+  font-family: 'Fredoka One', cursive;
   letter-spacing: 1px;
 `;
 // *********** Contact Data cotainer end *************

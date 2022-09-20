@@ -1,11 +1,11 @@
-import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
-import styled from "styled-components";
-import { menuData } from "../data/MenuData";
-import GlobalStyle from "./styles/GlobalStyles";
-import BurgerMenu from "./styles/BurgerMenu";
-import SprzedamSzkodeText from "./SprzedamSzkodeText/SprzedamSzkodeText";
-import { BrowserRouter as Router } from "react-router-dom";
+import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
+import styled from 'styled-components';
+import { menuData } from '../data/MenuData';
+import GlobalStyle from './styles/GlobalStyles';
+import BurgerMenu from './styles/BurgerMenu';
+import SprzedamSzkodeText from './SprzedamSzkodeText/SprzedamSzkodeText';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function Header() {
   return (
@@ -47,7 +47,7 @@ const NavLink = styled(Link)`
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-size: clamp(1.1rem, 1.6rem, 2.2rem);
+  font-size: clamp(1rem, 1.3rem, 2rem);
   margin: 5px 20px;
   justify-items: center;
   height: 100%;
@@ -55,9 +55,13 @@ const NavLink = styled(Link)`
   font-weight: 700;
   cursor: pointer;
   transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  @media screen and (max-width: 1480px) {
+    margin: 5px 10px;
+    font-size: clamp(0.9rem, 1.1rem, 1.8rem);
+  }
 
   :after {
-    content: "";
+    content: '';
     position: absolute;
     width: 0%;
     height: 3px;
@@ -77,7 +81,7 @@ const NavMenu = styled.div`
   align-items: center;
   margin-right: 40px;
 
-  @media screen and (max-width: 1540px) {
+  @media screen and (max-width: 1240px) {
     display: none;
   }
 `;

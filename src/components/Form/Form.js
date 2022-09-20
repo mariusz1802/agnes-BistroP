@@ -1,8 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Header } from "../Hero";
-import Input from "../Input/Input";
-import Button from "../Button/Button";
+import React from 'react';
+import styled from 'styled-components';
+import Input from '../Input/Input';
+import Button from '../Button/Button';
 
 function Form() {
   return (
@@ -26,4 +25,11 @@ const FormContainer = styled.form`
   align-items: center;
   width: 100%;
   justify-content: space-around;
+`;
+
+const Header = styled.h3`
+  color: white;
+  opacity: 1;
+  font-size: clamp(1.2rem, 2.1rem, 3.1rem);
+  margin-bottom: 20px;
 `;

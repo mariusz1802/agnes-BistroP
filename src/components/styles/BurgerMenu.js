@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { BsFacebook } from "react-icons/bs";
-import Hamburger from "hamburger-react";
-import { menuData } from "../../data/MenuData";
-import { RiInstagramFill } from "react-icons/ri";
-import { HashLink as Link } from "react-router-hash-link";
-import { BrowserRouter as Router } from "react-router-dom";
-import { url } from "../../data/url";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { BsFacebook } from 'react-icons/bs';
+import Hamburger from 'hamburger-react';
+import { menuData } from '../../data/MenuData';
+import { RiInstagramFill } from 'react-icons/ri';
+import { HashLink as Link } from 'react-router-hash-link';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { url } from '../../data/url';
 
 function BurgerMenu() {
   const [isOpen, setOpen] = useState(false);
@@ -73,7 +73,7 @@ const MobileMenu = styled.div`
     overflow: hidden;
     align-items: center;
     z-index: 250;
-    visibility: ${({ open }) => (open ? "visible" : "hidden")};
+    visibility: ${({ open }) => (open ? 'visible' : 'hidden')};
     opacity: ${({ open }) => (open ? 1 : 0)};
   }
 `;
@@ -130,13 +130,13 @@ const MobileLink = styled(Link)`
 `;
 const BurgerWrapper = styled.div`
   display: none;
-  @media screen and (max-width: 1540px) {
+  @media screen and (max-width: 1240px) {
     display: block;
     top: 15px;
     right: 15px;
     z-index: 300;
     position: fixed;
-    color: ${({ open }) => (open ? "#000" : "#fff")};
+    color: ${({ open }) => (open ? '#000' : '#fff')};
     font-size: 3rem;
     background: rgba(0, 0, 0, 0.1);
     -webkit-tap-highlight-color: transparent;
@@ -144,7 +144,7 @@ const BurgerWrapper = styled.div`
 `;
 
 const MobileTitle = styled.h2`
-  font-family: "Oleo Script";
+  font-family: 'Oleo Script';
   color: black;
   font-size: 3rem;
   margin: 20px 0;

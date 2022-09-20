@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 function InputEl({ placeholder }) {
   return (
@@ -31,7 +31,7 @@ const Input = styled.input`
 
 const InputWhite = styled.input`
   font-size: 1.7rem;
-  width: 95%;
+  width: 100%;
   margin: 10px;
   color: rgba(0, 0, 0, 0.6);
   background: white;
@@ -47,5 +47,10 @@ const InputWhite = styled.input`
   }
   :focus {
     outline: none;
+  }
+
+  @media screen and (max-width: 1580px) {
+    height: 50px;
+    font-size: 1.3rem;
   }
 `;
