@@ -10,12 +10,12 @@ import SprzedamSzkodeText from './SprzedamSzkodeText/SprzedamSzkodeText';
 
 function Footer() {
   return (
-    <MainWrapper id="contact">
+    <>
       <SprzedamSzkodeText />
-      <Layout>
-        <Wrapper>
-          {/* Footer data with icons */}
-          <DataContact>
+      <MainWrapper id="contact">
+        <Layout>
+          <Wrapper>
+            {/* Footer data with icons */}
             <ContactWrapper>
               <A href="tel+48666742743">
                 <ContactBox>
@@ -28,7 +28,7 @@ function Footer() {
               <A href="mailto: kontakt@sprzedamszkode.pl ">
                 <ContactBox>
                   <IconBox>
-                    <IoIosMail style={{ fontSize: '3.7rem' }} />
+                    <IoIosMail />
                   </IconBox>
                   <ContactText>kontakt@sprzedamszkode.pl</ContactText>
                 </ContactBox>
@@ -47,9 +47,7 @@ function Footer() {
               </A>
               <ContactBox>
                 <IconBox>
-                  <MdLocationOn
-                    style={{ fontSize: '4.2rem', marginLeft: '-10px' }}
-                  />
+                  <MdLocationOn />
                 </IconBox>
                 <ContactText>
                   NIP: 293843905 <br />
@@ -57,21 +55,25 @@ function Footer() {
                 </ContactText>
               </ContactBox>
             </ContactWrapper>
-          </DataContact>
-          {/* Contact form */}
-          <DataContact></DataContact>
-        </Wrapper>
-      </Layout>
-    </MainWrapper>
+          </Wrapper>
+        </Layout>
+      </MainWrapper>
+    </>
   );
 }
 
 export default Footer;
 
 const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
   padding: 20px 100px;
   border-top: 25px solid #af56ff;
   background: linear-gradient(#6a4fd4, #35286a);
+  @media screen and (max-width: 900px) {
+    padding: 20px 20px;
+  }
 `;
 
 const Layout = styled.div`
@@ -87,7 +89,7 @@ const Wrapper = styled.div`
   display: flex;
   @media screen and (max-width: 950px) {
     flex-direction: column;
-    align-items: center;
+    align-items: left;
   }
 `;
 // *********** Contact Data cotainer start *************
@@ -97,7 +99,6 @@ const DataContact = styled.div`
   width: 50%;
   padding: 20px;
   margin-top: 100px;
-  /* font-family: "Fredoka One", cursive; */
 
   @media screen and (max-width: 380px) {
     width: 100%;
@@ -137,6 +138,10 @@ const IconBox = styled.div`
   display: flex;
   margin-right: 25px;
   justify-content: start;
+  @media screen and (max-width: 600px) {
+    font-size: 1.9rem;
+    margin-right: 10px;
+  }
 `;
 
 const ContactText = styled.p`
@@ -146,5 +151,8 @@ const ContactText = styled.p`
   font-size: clamp(1.6rem, 10vw, 2.1rem);
   font-family: 'Fredoka One', cursive;
   letter-spacing: 1px;
+  @media screen and (max-width: 600px) {
+    font-size: 1.4rem;
+  }
 `;
 // *********** Contact Data cotainer end *************

@@ -19,6 +19,12 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .carCrash {
+    top: -200px;
+  }
+}
+
 .background {
   width: auto;
   height: auto;

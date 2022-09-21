@@ -37,7 +37,7 @@ export const Title = styled.h1`
     font-size: 3.3rem;
   }
   @media screen and (max-width: 530px) {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
   }
 
   span {
@@ -50,6 +50,7 @@ export const Title = styled.h1`
 
 const TitleWrapper = styled.div`
   position: relative;
+  background: red;
 `;
 const WhiteTitle = styled(Title)`
   -webkit-text-stroke: 10px white;
@@ -64,6 +65,6 @@ const WhiteTitle = styled(Title)`
     font-size: 3.3rem;
   }
   @media screen and (max-width: 530px) {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
   }
 `;

@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import Crash from "../assets/carcrash.svg";
-import Background from "../assets/backgroundPurple.svg";
-import * as styles from "./Hero.module.scss";
-import FormStyle from "../components/Form/Form";
+import React from 'react';
+import styled from 'styled-components';
+import Crash from '../assets/carcrash.svg';
+import Background from '../assets/backgroundPurple.svg';
+import * as styles from './Hero.module.scss';
+import FormStyle from '../components/Form/Form';
 function Hero() {
   return (
     <>
@@ -81,7 +81,7 @@ const ColumnWrapper = styled.div`
   @media screen and (max-width: 800px) {
     flex-direction: column-reverse;
     height: auto;
-    top: 470px;
+    top: 670px;
   }
 `;
 

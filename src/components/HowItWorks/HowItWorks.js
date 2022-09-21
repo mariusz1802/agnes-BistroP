@@ -1,7 +1,7 @@
-import React from "react";
-import TransparentContainer from "../TransparentContainer/TransparentContainer";
-import { myObjects } from "../../data/TextData";
-import styled from "styled-components";
+import React from 'react';
+import TransparentContainer from '../TransparentContainer/TransparentContainer';
+import { myObjects } from '../../data/TextData';
+import styled from 'styled-components';
 
 function HowItWorks() {
   return (
@@ -21,6 +21,6 @@ export default HowItWorks;
 
 const Wrapper = styled.div`
   @media screen and (max-width: 800px) {
-    margin-top: 400px;
+    margin-top: 650px;
   }
 `;

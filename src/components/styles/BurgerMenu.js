@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { BsFacebook } from "react-icons/bs";
-import Hamburger from "hamburger-react";
-import { menuData } from "../../data/MenuData";
-import { RiInstagramFill } from "react-icons/ri";
-import { HashLink as Link } from "react-router-hash-link";
-import { BrowserRouter as Router } from "react-router-dom";
-import { url } from "../../data/url";
-import SprzedamSzkodeText from "../SprzedamSzkodeText/SprzedamSzkodeText";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { BsFacebook } from 'react-icons/bs';
+import Hamburger from 'hamburger-react';
+import { menuData } from '../../data/MenuData';
+import { RiInstagramFill } from 'react-icons/ri';
+import { HashLink as Link } from 'react-router-hash-link';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { url } from '../../data/url';
+import SprzedamSzkodeText from '../SprzedamSzkodeText/SprzedamSzkodeText';
 
 function BurgerMenu() {
   const [isOpen, setOpen] = useState(false);
@@ -22,9 +22,9 @@ function BurgerMenu() {
         <Hamburger toggled={isOpen} toggle={setOpen} size={36} distance="sm" />
       </BurgerWrapper>
       <MobileMenu open={isOpen}>
+        <SprzedamSzkodeText />
         <MobileContainer>
           <ScrollContainer>
-            <SprzedamSzkodeText />
             <Router>
               <LinkContainer>
                 {menuData.map((item, index) => (
@@ -64,20 +64,25 @@ const MobileMenu = styled.div`
   @media screen and (max-width: 768px) {
     display: flex;
     position: fixed;
-    justify-content: center;
     top: 0;
     right: 0;
     width: 100%;
+    text-align: center;
     height: 100vh;
     background: linear-gradient(#6a4fd4, #35286a);
     transition: all 0.35s;
     overflow: hidden;
-    align-items: center;
     z-index: 250;
-    visibility: ${({ open }) => (open ? "visible" : "hidden")};
+    padding-top: 100px;
+    visibility: ${({ open }) => (open ? 'visible' : 'hidden')};
     opacity: ${({ open }) => (open ? 1 : 0)};
   }
 `;
+
+const TextWrapper = styled.div`
+  width: 70%;
+`;
+
 const MobileContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -118,7 +123,6 @@ const LinkContainer = styled.div`
 `;
 
 const MobileLink = styled(Link)`
-  color: black;
   text-decoration: none;
   font-size: 1.8rem;
   border-bottom: 1px solid white;
@@ -138,7 +142,7 @@ const BurgerWrapper = styled.div`
     right: 15px;
     z-index: 300;
     position: fixed;
-    color: ${({ open }) => (open ? "#000" : "#fff")};
+    color: '#fff';
     font-size: 3rem;
     background: rgba(0, 0, 0, 0.1);
     -webkit-tap-highlight-color: transparent;
@@ -146,7 +150,7 @@ const BurgerWrapper = styled.div`
 `;
 
 const MobileTitle = styled.h2`
-  font-family: "Oleo Script";
+  font-family: 'Oleo Script';
   color: black;
   font-size: 3rem;
   margin: 20px 0;

@@ -1,9 +1,9 @@
-import React from "react";
-import TransparentContainer from "../TransparentContainer/TransparentContainer";
-import CircleAnimation from "../CircleAnimation/CircleAnimation";
-import styled from "styled-components";
-import { myObjects } from "../../data/TextData";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+import React from 'react';
+import TransparentContainer from '../TransparentContainer/TransparentContainer';
+import CircleAnimation from '../CircleAnimation/CircleAnimation';
+import styled from 'styled-components';
+import { myObjects } from '../../data/TextData';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 function Stats() {
   const { height, width } = useWindowDimensions();
@@ -20,9 +20,17 @@ function Stats() {
     fontSize: 80,
   };
 
+  const MediumCircle = {
+    size: 330,
+    strokeWidth: 45,
+    fontSize: 65,
+  };
+
   function useCirce() {
-    if (width < 1250) {
+    if (width < 1250 && width > 800) {
       return BigCircle;
+    } else if (width < 800) {
+      return MediumCircle;
     } else return SmallCircle;
   }
 
@@ -36,9 +44,9 @@ function Stats() {
           percentage={90}
           color="yellow"
         >
-          {" "}
-          Zaniżonych <br /> odszkodowań{" "}
-        </CircleAnimation>{" "}
+          {' '}
+          Zaniżonych <br /> odszkodowań{' '}
+        </CircleAnimation>{' '}
         <CircleAnimation
           size={useCirce().size}
           strokeWidth={useCirce().strokeWidth}
@@ -46,9 +54,9 @@ function Stats() {
           percentage={90}
           color="yellow"
         >
-          {" "}
-          Zanizonych <br /> odszkodowań{" "}
-        </CircleAnimation>{" "}
+          {' '}
+          Zanizonych <br /> odszkodowań{' '}
+        </CircleAnimation>{' '}
         <CircleAnimation
           size={useCirce().size}
           strokeWidth={useCirce().strokeWidth}
@@ -56,9 +64,9 @@ function Stats() {
           percentage={90}
           color="yellow"
         >
-          {" "}
-          Zanizonych <br /> odszkodowań{" "}
-        </CircleAnimation>{" "}
+          {' '}
+          Zanizonych <br /> odszkodowań{' '}
+        </CircleAnimation>{' '}
       </Wrapper>
     </TransparentContainer>
   );
