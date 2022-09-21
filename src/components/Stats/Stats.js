@@ -3,14 +3,46 @@ import TransparentContainer from "../TransparentContainer/TransparentContainer";
 import CircleAnimation from "../CircleAnimation/CircleAnimation";
 import styled from "styled-components";
 import { myObjects } from "../../data/TextData";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
+
 function Stats() {
+  const { height, width } = useWindowDimensions();
+
+  const SmallCircle = {
+    size: 270,
+    strokeWidth: 35,
+    fontSize: 55,
+  };
+
+  const BigCircle = {
+    size: 470,
+    strokeWidth: 55,
+    fontSize: 80,
+  };
+
+  function useCirce() {
+    if (width < 1250) {
+      return BigCircle;
+    } else return SmallCircle;
+  }
+
   return (
     <TransparentContainer title={myObjects.stats.title} id="statics">
-      {" "}
       <Wrapper>
         <CircleAnimation
-          size={270}
-          strokeWidth={35}
+          size={useCirce().size}
+          strokeWidth={useCirce().strokeWidth}
+          fontSize={useCirce().fontSize}
+          percentage={90}
+          color="yellow"
+        >
+          {" "}
+          Zaniżonych <br /> odszkodowań{" "}
+        </CircleAnimation>{" "}
+        <CircleAnimation
+          size={useCirce().size}
+          strokeWidth={useCirce().strokeWidth}
+          fontSize={useCirce().fontSize}
           percentage={90}
           color="yellow"
         >
@@ -18,17 +50,9 @@ function Stats() {
           Zanizonych <br /> odszkodowań{" "}
         </CircleAnimation>{" "}
         <CircleAnimation
-          size={270}
-          strokeWidth={35}
-          percentage={90}
-          color="yellow"
-        >
-          {" "}
-          Zanizonych <br /> odszkodowań{" "}
-        </CircleAnimation>{" "}
-        <CircleAnimation
-          size={270}
-          strokeWidth={35}
+          size={useCirce().size}
+          strokeWidth={useCirce().strokeWidth}
+          fontSize={useCirce().fontSize}
           percentage={90}
           color="yellow"
         >

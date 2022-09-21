@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { BsFacebook } from 'react-icons/bs';
-import Hamburger from 'hamburger-react';
-import { menuData } from '../../data/MenuData';
-import { RiInstagramFill } from 'react-icons/ri';
-import { HashLink as Link } from 'react-router-hash-link';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { url } from '../../data/url';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { BsFacebook } from "react-icons/bs";
+import Hamburger from "hamburger-react";
+import { menuData } from "../../data/MenuData";
+import { RiInstagramFill } from "react-icons/ri";
+import { HashLink as Link } from "react-router-hash-link";
+import { BrowserRouter as Router } from "react-router-dom";
+import { url } from "../../data/url";
+import SprzedamSzkodeText from "../SprzedamSzkodeText/SprzedamSzkodeText";
 
 function BurgerMenu() {
   const [isOpen, setOpen] = useState(false);
@@ -23,7 +24,7 @@ function BurgerMenu() {
       <MobileMenu open={isOpen}>
         <MobileContainer>
           <ScrollContainer>
-            <MobileTitle to="/">Agnes Bistro </MobileTitle>
+            <SprzedamSzkodeText />
             <Router>
               <LinkContainer>
                 {menuData.map((item, index) => (
@@ -68,12 +69,12 @@ const MobileMenu = styled.div`
     right: 0;
     width: 100%;
     height: 100vh;
-    background: white;
+    background: linear-gradient(#6a4fd4, #35286a);
     transition: all 0.35s;
     overflow: hidden;
     align-items: center;
     z-index: 250;
-    visibility: ${({ open }) => (open ? 'visible' : 'hidden')};
+    visibility: ${({ open }) => (open ? "visible" : "hidden")};
     opacity: ${({ open }) => (open ? 1 : 0)};
   }
 `;
@@ -120,12 +121,13 @@ const MobileLink = styled(Link)`
   color: black;
   text-decoration: none;
   font-size: 1.8rem;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   text-align: center;
   width: 100%;
+  color: white;
   padding: 12px;
   :first-child {
-    border-top: 1px solid black;
+    border-top: 1px solid white;
   }
 `;
 const BurgerWrapper = styled.div`
@@ -136,7 +138,7 @@ const BurgerWrapper = styled.div`
     right: 15px;
     z-index: 300;
     position: fixed;
-    color: ${({ open }) => (open ? '#000' : '#fff')};
+    color: ${({ open }) => (open ? "#000" : "#fff")};
     font-size: 3rem;
     background: rgba(0, 0, 0, 0.1);
     -webkit-tap-highlight-color: transparent;
@@ -144,7 +146,7 @@ const BurgerWrapper = styled.div`
 `;
 
 const MobileTitle = styled.h2`
-  font-family: 'Oleo Script';
+  font-family: "Oleo Script";
   color: black;
   font-size: 3rem;
   margin: 20px 0;

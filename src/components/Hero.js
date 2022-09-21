@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import Crash from '../assets/carcrash.svg';
-import Background from '../assets/backgroundPurple.svg';
-import * as styles from './Hero.module.scss';
-import FormStyle from '../components/Form/Form';
+import React from "react";
+import styled from "styled-components";
+import Crash from "../assets/carcrash.svg";
+import Background from "../assets/backgroundPurple.svg";
+import * as styles from "./Hero.module.scss";
+import FormStyle from "../components/Form/Form";
 function Hero() {
   return (
     <>
@@ -16,7 +16,11 @@ function Hero() {
             <Header>Czy wiesz że...?</Header>
             <Paragraph>
               Firmy ubezpieczeniowe w większości zaniżają rzeczywistą kwotę
-              odszkodowania za kolizję bądź wypadek, z OC sprawcy?
+              odszkodowania za kolizję bądź wypadek, z OC sprawcy? Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Quam, soluta tempore
+              labore laudantium delectus dolor nesciunt accusamus cupiditate
+              iure alias quasi ratione officia. Autem, dolor at provident itaque
+              veritatis nam?
             </Paragraph>
           </Text>
 
@@ -68,7 +72,7 @@ const ColumnWrapper = styled.div`
   width: 100%;
   height: 50%;
   position: absolute;
-  bottom: 100px;
+  bottom: 120px;
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
@@ -77,7 +81,7 @@ const ColumnWrapper = styled.div`
   @media screen and (max-width: 800px) {
     flex-direction: column-reverse;
     height: auto;
-    top: 400px;
+    top: 470px;
   }
 `;
 
@@ -85,7 +89,6 @@ const Text = styled.div`
   width: 30%;
   padding: 35px;
   margin-bottom: 20px;
-  height: 250px;
   height: auto;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
@@ -127,6 +130,6 @@ export const Header = styled.h3`
   margin-bottom: 20px;
 `;
 const Paragraph = styled.p`
-  font-size: clamp(1rem, 1.4rem, 1.8rem);
+  font-size: clamp(1.1rem, 1.5rem, 1.9rem);
   color: white;
 `;

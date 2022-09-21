@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { myObjects } from "../../data/TextData";
 
 function TransparentContainer({ title, desc, image, children, id }) {
   return (
@@ -27,9 +26,9 @@ const Container = styled.div`
 `;
 const Title = styled.h3`
   font-size: clamp(2.2rem, 3rem, 3.2rem);
-  font-weight: 400;
+  font-weight: 500;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 `;
 
 const Description = styled.p`

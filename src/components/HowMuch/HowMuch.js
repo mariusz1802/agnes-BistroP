@@ -31,6 +31,7 @@ const Nav = styled(Link)`
   text-decoration: none;
 `;
 const ButtonBox = styled.div`
-  width: 50%;
+  width: 40%;
   margin: auto;
+  margin-top: 50px;
 `;

@@ -2,7 +2,14 @@ import React, { Children, useEffect, useState } from "react";
 import styled from "styled-components";
 import * as styles from "./CircleAnimation.module.scss";
 
-function CircleAnimation({ size, strokeWidth, percentage, color, children }) {
+function CircleAnimation({
+  size,
+  strokeWidth,
+  percentage,
+  color,
+  fontSize,
+  children,
+}) {
   const [progress, setProgress] = useState(0);
   useEffect(() => {
     setProgress(percentage);
@@ -15,6 +22,12 @@ function CircleAnimation({ size, strokeWidth, percentage, color, children }) {
   return (
     <ProgressWrapper>
       <svg width={size} height={size} viewBox={viewBox}>
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#ffd800" />
+            <stop offset="100%" stopColor="#fbf675" />
+          </linearGradient>
+        </defs>
         <circle
           fill="none"
           stroke="#ccc"
@@ -25,7 +38,7 @@ function CircleAnimation({ size, strokeWidth, percentage, color, children }) {
         />
         <circle
           fill="none"
-          stroke={color}
+          stroke="url(#gradient)"
           cx={size / 2}
           cy={size / 2}
           r={radius}
@@ -36,8 +49,8 @@ function CircleAnimation({ size, strokeWidth, percentage, color, children }) {
           style={{ transition: "all 1s" }}
         />
         <text
-          fill="white"
-          fontSize="40px"
+          fill="yellow"
+          fontSize={`${fontSize}px`}
           fontWeight="600"
           x="50%"
           y="50%"
@@ -58,10 +71,17 @@ const ProgressWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: 1250px) {
+    margin-bottom: 70px;
+  }
 `;
 
 const Text = styled.p`
   margin-top: 20px;
   font-size: 2rem;
   text-align: center;
+  font-weight: 500;
+  @media screen and (max-width: 1250px) {
+    font-size: 3rem;
+  }
 `;

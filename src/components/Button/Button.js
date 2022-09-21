@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 function ButtonEl({ children, type }) {
   return (
@@ -12,7 +12,7 @@ function ButtonEl({ children, type }) {
 export default ButtonEl;
 
 const Button = styled.button`
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   width: 95%;
   height: 80px;
   display: flex;
@@ -22,12 +22,12 @@ const Button = styled.button`
   border-radius: 40px;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(#ffe852, #ffea07);
-  transition: 1s all;
+  background: linear-gradient(#ffe11c, #ffde06);
+  transition: 0.4s;
   border: none;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.7);
   :hover {
     cursor: pointer;
-    background: linear-gradient(#ffe11c, #ffde06);
+    background: linear-gradient(#ffe852, #ffea07);
   }
 `;
