@@ -36,6 +36,7 @@ module.exports = {
       options: {
         fonts: [
           `oleo script\: 300, 700`,
+          `fredoka one\: 300, 700`,
           `source sans pro\:300,400,400i,700`,
           `prompt\:300,400,500,700`, // you can also specify font weights and styles
         ],

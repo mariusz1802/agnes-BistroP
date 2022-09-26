@@ -14,13 +14,13 @@ const IndexPage = () => {
     <NoSSR>
       <Layout>
         <Hero />
-        <ScrollUpBtn />
+        <ScrollUpBtn />ę
         <ContentWrapper>
           <HowItWorks />
           <Stats />
           <HowMuch />
         </ContentWrapper>
-        <Footer />
+        <Footer />ę
       </Layout>
     </NoSSR>
   );
