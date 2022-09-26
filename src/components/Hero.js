@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import Crash from '../assets/carcrash.svg';
-import Background from '../assets/backgroundPurple.svg';
-import * as styles from './Hero.module.scss';
-import FormStyle from '../components/Form/Form';
+import React from "react";
+import styled from "styled-components";
+import Crash from "../assets/carcrash.svg";
+import Background from "../assets/backgroundPurple.svg";
+import * as styles from "./Hero.module.scss";
+import FormStyle from "../components/Form/Form";
 function Hero() {
   return (
     <>
@@ -19,8 +19,7 @@ function Hero() {
               odszkodowania za kolizję bądź wypadek, z OC sprawcy? Lorem ipsum
               dolor sit amet consectetur adipisicing elit. Quam, soluta tempore
               labore laudantium delectus dolor nesciunt accusamus cupiditate
-              iure alias quasi ratione officia. Autem, dolor at provident itaque
-              veritatis nam?
+              iure alias quasi ratione officia. Autem, dolor at ?
             </Paragraph>
           </Text>
 
