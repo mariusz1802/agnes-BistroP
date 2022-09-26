@@ -1,4 +1,5 @@
 import * as React from "react";
+import NoSSR from "react-no-ssr";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import ScrollUpBtn from "../components/ScrollUpBtn/ScrollUpBtn";
@@ -10,16 +11,18 @@ import ContentWrapper from "../components/Form/ContentWrapper";
 // markup
 const IndexPage = () => {
   return (
-    <Layout>
-      <Hero />
-      <ScrollUpBtn />
-      <ContentWrapper>
-        <HowItWorks />
-        <Stats />
-        <HowMuch />
-      </ContentWrapper>
-      <Footer />
-    </Layout>
+    <NoSSR>
+      <Layout>
+        <Hero />
+        <ScrollUpBtn />
+        <ContentWrapper>
+          <HowItWorks />
+          <Stats />
+          <HowMuch />
+        </ContentWrapper>
+        <Footer />
+      </Layout>
+    </NoSSR>
   );
 };
 
