@@ -1,12 +1,12 @@
-import React from 'react';
-import TransparentContainer from '../TransparentContainer/TransparentContainer';
-import CircleAnimation from '../CircleAnimation/CircleAnimation';
-import styled from 'styled-components';
-import { myObjects } from '../../data/TextData';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
+import React from "react";
+import TransparentContainer from "../TransparentContainer/TransparentContainer";
+import CircleAnimation from "../CircleAnimation/CircleAnimation";
+import styled from "styled-components";
+import { myObjects } from "../../data/TextData";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 function Stats() {
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   const SmallCircle = {
     size: 270,
@@ -44,9 +44,9 @@ function Stats() {
           percentage={90}
           color="yellow"
         >
-          {' '}
-          Zaniżonych <br /> odszkodowań{' '}
-        </CircleAnimation>{' '}
+          {" "}
+          Zaniżonych <br /> odszkodowań{" "}
+        </CircleAnimation>{" "}
         <CircleAnimation
           size={useCirce().size}
           strokeWidth={useCirce().strokeWidth}
@@ -54,9 +54,9 @@ function Stats() {
           percentage={90}
           color="yellow"
         >
-          {' '}
-          Zanizonych <br /> odszkodowań{' '}
-        </CircleAnimation>{' '}
+          {" "}
+          Zanizonych <br /> odszkodowań{" "}
+        </CircleAnimation>{" "}
         <CircleAnimation
           size={useCirce().size}
           strokeWidth={useCirce().strokeWidth}
@@ -64,9 +64,9 @@ function Stats() {
           percentage={90}
           color="yellow"
         >
-          {' '}
-          Zanizonych <br /> odszkodowań{' '}
-        </CircleAnimation>{' '}
+          {" "}
+          Zanizonych <br /> odszkodowań{" "}
+        </CircleAnimation>{" "}
       </Wrapper>
     </TransparentContainer>
   );
