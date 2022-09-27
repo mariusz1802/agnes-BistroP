@@ -1,19 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 function ButtonEl({ children, type }) {
-  return (
-    <>
-      <Button type={type}>{children}</Button>
-    </>
-  );
+  return <Button type={type}>{children}</Button>;
 }
 
 export default ButtonEl;
 
 const Button = styled.button`
   font-size: 1.8rem;
-  width: 95%;
+  width: 100%;
   height: 80px;
   display: flex;
   text-transform: uppercase;

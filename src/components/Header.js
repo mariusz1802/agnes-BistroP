@@ -38,7 +38,10 @@ const Nav = styled.nav`
   padding: 1rem calc((100vw - 1800px) / 2);
   z-index: 200;
   position: relative;
-  z-index: 3;
+  z-index: 100;
+  @media screen and (max-width: 800px) {
+    padding-top: 140px;
+  }
 `;
 
 const NavLink = styled(Link)`

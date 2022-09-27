@@ -76,10 +76,10 @@ const ColumnWrapper = styled.div`
   justify-content: space-around;
   align-items: flex-end;
   align-content: space-around;
-  z-index: 2;
   @media screen and (max-width: 800px) {
     flex-direction: column-reverse;
     height: auto;
+    align-items: center;
     top: 670px;
   }
 `;
@@ -91,9 +91,12 @@ const Text = styled.div`
   height: auto;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
+  z-index: 2;
   @media screen and (max-width: 1200px) {
     display: none;
     height: auto;
+    padding: 35px 10px;
+    text-align: center;
   }
 `;
 
@@ -113,6 +116,7 @@ const HigherText = styled(Text)`
 const Form = styled(Text)`
   height: auto;
   width: 35%;
+  z-index: 2;
   @media screen and (max-width: 1200px) {
     display: block;
     width: 45%;
@@ -125,8 +129,11 @@ const Form = styled(Text)`
 export const Header = styled.h3`
   color: white;
   opacity: 1;
-  font-size: clamp(1.5rem, 2.4rem, 3.4rem);
+  font-size: clamp(1.4rem, 2rem, 3.4rem);
   margin-bottom: 20px;
+  @media screen and (max-width: 800px) {
+    text-align: center;
+  }
 `;
 const Paragraph = styled.p`
   font-size: clamp(1.1rem, 1.5rem, 1.9rem);

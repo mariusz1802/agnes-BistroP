@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import Input from '../Input/Input';
-import Button from '../Button/Button';
+import React from "react";
+import styled from "styled-components";
+import Input from "../Input/Input";
+import Button from "../Button/Button";
 
 function Form() {
   return (
@@ -22,9 +22,9 @@ export default Form;
 const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
-  justify-content: space-around;
+  align-content: center;
+  align-items: center;
 `;
 
 const Header = styled.h3`
